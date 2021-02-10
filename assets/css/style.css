@@ -1,0 +1,50 @@
+:root {
+    --main-bg: white;
+}
+
+body {
+    background: var(--main-bg);
+    text-align: center;
+}
+
+header img {
+    display: block;
+    width: 25%;
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text {
+    text-align: center;
+    margin-top: 5%;
+}
+
+.text p {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-content {
+    margin-top: 2%;
+}
+
+.form {
+    width: 23%;
+    margin: 5% 25%;
+    text-align: left;
+}
+
+form div {
+    display: flex;
+    justify-content: space-between;
+}
+
+#submit {
+    display: inline-block;
+}
+
+#clear {
+    display: inline-block;
+}
