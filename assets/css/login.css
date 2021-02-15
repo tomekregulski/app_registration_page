@@ -1,0 +1,66 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 200;
+}
+
+main {
+    width: 70%;
+    margin: 0 auto;
+}
+
+header {
+    margin: 150px auto 35px auto;
+}
+
+#login-img {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+}
+
+#login-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+    width: 100%;
+}
+
+@media screen and (min-width: 400px) {
+
+main {
+    width: 50%;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 650px) {
+
+    main {
+        width: 40%;
+        margin: 0 auto;
+    }
+
+    #login-img {
+        width: 40%;
+    }
+    
+    form {
+        margin-top: 50px;
+    }
+
+@media screen and (min-width: 1310px) {
+    main {
+        width: 30%;
+        margin: 0 auto;
+    }
+
+    form {
+        margin-top: 100px;
+    }
+
+    #login-buttons {
+        display: flex;
+        justify-content: space-between;
+    }
+}

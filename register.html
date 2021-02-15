@@ -4,55 +4,85 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/register.css">
     <title>Document</title>
 </head>
 <body>
     <header>
-        <img src="./assets/images/phoodie.png" alt="Phoodie Marketing">
+        <img src="./assets/images/phoodie.png" id="register-img" alt="Phoodie Marketing">
     </header>
     <main>
         <section class="text">
-            <h2>Brand Ambassador Registration</h2>
             <div class="text-content">
                 <p>
-                    Welcome to the Phoodie Team!
+                    Welcome to the Phoodie Field App!
                 </p>
                 <p>
-                    Fill out the form below to create your user account. Your info will be sent to our management team to confirm your spot. 
+                    If you are interested in joining our team, please fill out the form below. 
                 </p>
                 <p>
-                    Please make sure to use the personal info that you submitted in your application to ensure that we recognize you. You can always change this later if you have a preferred name, etc.
+                    Your information will be sent to our Talent Management team, and someone will be in touch soon to set up a call. 
                 </p>
             </div>
         </section>
         <section class="form-section">
-            <form class="form">
-                <div class="form-element" id="name">
-                  <label for="name">Full Name: </label>
-                  <input type="text" name="name" id="name" required>
+            <form class="needs-validation" novalidate>
+                <div class="form-row">
+                    <div class="col-md-4 mb-3">
+                        <input type="text" class="form-control" id="validationCustom01" placeholder="First name" required>
+                        <div class="valid-feedback">
+                        Looks good!
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" required>
+                        <div class="valid-feedback">
+                        Looks good!
+                        </div>
+                    </div>
+                    </div>
+                    <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <input type="text" class="form-control" id="validationCustom03" placeholder="City" required>
+                        <div class="invalid-feedback">
+                        Please provide a valid city.
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <input type="text" class="form-control" id="validationCustom04" placeholder="State" required>
+                        <div class="invalid-feedback">
+                        Please provide a valid state.
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <input type="text" class="form-control" id="validationCustom05" placeholder="Zip" required>
+                        <div class="invalid-feedback">
+                        Please provide a valid zip.
+                        </div>
+                    </div>
+                    </div>
+                    <div class="form-group">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                        <label class="form-check-label" for="invalidCheck">
+                        Agree to terms and conditions
+                        </label>
+                        <div class="invalid-feedback">
+                        You must agree before submitting.
+                        </div>
+                    </div>
                 </div>
-                <div class="form-element" id="email">
-                  <label for="email">Email: </label>
-                  <input type="email" name="email" id="email" required>
-                </div>
-                <div class="form-element" id="password">
-                    <label for="password">Password: </label>
-                    <input type="email" name="email" id="email" required>
-                </div>
-                <div class="form-element" id="password2">
-                    <label for="password2">Repeat Password: </label>
-                    <input type="email" name="email" id="email" required>
-                </div>
-                <div class="form-element" id="submit">
-                  <input type="submit" value="Submit">
-                </div>
-                <div class="form-element" id="clear">
-                    <input type="reset" value="Reset">
+                <div id="buttons">
+                    <a href="#" class="btn btn-success btn-lg btn-block" type="submit">Submit form</a>
+                    <a href="index.html" class="btn btn-secondary btn-lg btn-block" type="button">Back to Login</a>
                 </div>
             </form>
         </section>
     </main>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -26,7 +26,7 @@ header {
 
 .text {
     text-align: center;
-    margin: 0 20% 0 20%;
+    margin: 0 10% 0 10%;
 }
 
 
@@ -34,7 +34,19 @@ header {
     margin: 10% 0;
 }
 
+.form-row {
+    margin: 0 5%;
+}
+
 .needs-validation {
     display: flex;
     flex-direction: column;
+}
+
+.form-check-input {
+    padding-right: 5px;
+}
+
+#buttons {
+    margin-top: 15px;
 }
