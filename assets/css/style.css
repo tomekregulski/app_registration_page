@@ -8,8 +8,8 @@
     font-weight: 200;
 }
 
-body {
-    background: var(--main-bg);
+/* body { */
+    /* background: var(--main-bg);
     text-align: center;
 }
 
@@ -32,9 +32,5 @@ header {
 
 .text-content p {
     margin: 10% 0;
-}
+} */
 
-.needs-validation {
-    display: flex;
-    flex-direction: column;
-}

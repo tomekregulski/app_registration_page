@@ -4,15 +4,15 @@
     font-weight: 200;
 }
 
-main {
+/* main {
     width: 70%;
     margin: 0 auto;
-}
+} */
 
 header {
     margin: 150px auto 35px auto;
 }
-
+/* 
 #login-img {
     display: block;
     width: 50%;
@@ -63,4 +63,4 @@ main {
         display: flex;
         justify-content: space-between;
     }
-}
+} */
