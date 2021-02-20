@@ -1,20 +1,22 @@
-:root {
-    --main-bg: white;
-}
-
 * {
     font-family: 'Montserrat', sans-serif;
     font-size: 12px;
     font-weight: 200;
 }
 
+header {
+    margin: 13em auto 35px auto;
+}
+
 body {
-    background: var(--main-bg);
     text-align: center;
 }
 
-header {
-    margin: 100px auto 35px auto;
+
+#phoodie-front-logo {
+    display: block;
+    height: 160px;
+    margin: 0 auto 75px auto;
 }
 /* 
 #register-img {

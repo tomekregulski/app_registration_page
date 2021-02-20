@@ -10,14 +10,16 @@
 } */
 
 header {
-    margin: 150px auto 35px auto;
+    margin: 15em auto 35px auto;
 }
-/* 
-#login-img {
+
+#phoodie-front-logo {
     display: block;
-    width: 50%;
-    margin: 0 auto;
+    height: 180px;
+    margin: 0 auto 75px auto;
 }
+
+/*
 
 #login-buttons {
     display: flex;

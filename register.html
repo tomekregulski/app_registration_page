@@ -14,7 +14,7 @@
 <body>
     <div class="container">
         <header>
-            <img class="img-fluid col-9" src="./assets/images/phoodie.png" id="register-img" alt="Phoodie Marketing">
+            <img class="img-fluid col-9" src="./assets/images/phoodie.png" id="phoodie-front-logo" alt="Phoodie Marketing">
         </header>
         <main>
             <div class="row mx-auto col-9">
@@ -25,27 +25,21 @@
                     If you are interested in joining our team, please fill out the form below. 
                 </p>
                 <p class="mx-auto">
-                    Your information will be sent to our Talent Management team, and someone will be in touch soon to set up a call. 
+                    Your information will be sent to our Talent Management team, and someone will be in touch soon to set up a call! 
                 </p>
             </div>
-            <form>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="first-name"></label>
-                        <input type="text" class="form-control" id="first-name" placeholder="First Name">
+            <div class="container border rounded pb-4 pt-4 px-5 mb-4 mt-3 " style="max-width: 400px; background-color: white;">
+                <form>
+                    <div class="form-group pt-4">
+                        <input type="text" class="form-control" placeholder="First Name">
                     </div>
-                    <div class="form-group col-md-6">
-                        <label for="last-name"></label>
-                        <input type="text" class="form-control" id="last-name" placeholder="Last Name">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Last Name">
                     </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="city"></label>
-                        <input type="text" class="form-control" id="city" placeholder="City">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="City">
                     </div>
-                    <div class="form-group col-md-3 col-6">
-                        <label for="state"></label>
+                    <div class="form-group">
                         <select class="form-control" name="state" id="state">
                             <option value="00">Select Your State</option>
                             <option value="AL">Alabama</option>
@@ -101,21 +95,13 @@
                             <option value="WY">Wyoming</option>
                         </select>
                     </div>
-                    <div class="form-group col-md-3 col-6">
-                        <label for="zip"></label>
+                    <div class="form-group">
                         <input type="text" class="form-control" id="zip" placeholder="Zip Code">
                     </div>
-                </div>
-                <div class="form-group col-6 col-md-3">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        <label class="form-check-label" for="flexCheckDefault">
-                        Agree to Terms and Conditions
-                        </label>
-                    </div>
-                </div>
-                <a href="#" class="btn btn-success btn-lg btn-block" type="submit">Submit form</a>
-                <a href="index.html" class="btn btn-secondary btn-lg btn-block" type="button">Back to Login</a>
+                    <input type="submit" value="Submit" class="btn btn-info btn-block btn-lg mb-3" style="background-color: orange;">
+                </form>
+            </div class="container justify-content-center">
+                <a href="index.html" class="btn btn-success btn-lg" style="width: 280px;" type="button">Back to Login</a>
             </form>
         </main>
     </div>
