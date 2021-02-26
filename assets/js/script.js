@@ -1,88 +1,137 @@
 var demoDisplay = document.querySelector("#demos");
-var demo;
+var container;
+var row;
+var eventName;
+var date;
+var duration;
+var time;
+var venue;
+var campaign;
 
 var demoArray = [
 {
-    prompt: "The answer is yes",
-    choices: ["yes", "no", "not", "ain't"],
-    correct: "0",
+    name: "Demo-",
+    date: "01/01/2021",
+    time: "3:00 PM",
+    venue: "Brooklyn WFM",
+    campaign: "Saso",
+    duration: "3:00"
 },
 {
-    prompt: "The answer is also yes",
-    choices: ["no", "yes", "not", "ain't"],
-    correct: "1",
+    name: "Demo-",
+    date: "01/01/2021",
+    time: "3:00 PM",
+    venue: "Brooklyn WFM",
+    campaign: "Saso",
+    duration: "3:00"
 },
 {
-    prompt: "The answer might be yes",
-    choices: ["no", "not", "yes", "ain't"],
-    correct: "2",
+    name: "Demo-",
+    date: "01/01/2021",
+    time: "3:00 PM",
+    venue: "Brooklyn WFM",
+    campaign: "Saso",
+    duration: "3:00"
 },
 {
-    prompt: "The answer is definitely yes",
-    choices: ["no", "ain't", "not", "yes"],
-    correct: "3",
+    name: "Demo-",
+    date: "01/01/2021",
+    time: "3:00 PM",
+    venue: "Brooklyn WFM",
+    campaign: "Saso",
+    duration: "3:00"
 },
 {
-    prompt: "The answer is no",
-    choices: ["yes", "no", "not", "ain't"],
-    correct: "1",
+    name: "Demo-",
+    date: "01/01/2021",
+    time: "3:00 PM",
+    venue: "Brooklyn WFM",
+    campaign: "Saso",
+    duration: "3:00"
 },
 {
-    prompt: "The answer is also no",
-    choices: ["no", "yes", "not", "ain't"],
-    correct: "0",
+    name: "Demo-",
+    date: "01/01/2021",
+    time: "3:00 PM",
+    venue: "Brooklyn WFM",
+    campaign: "Saso",
+    duration: "3:00"
 },
 {
-    prompt: "The answer might be no",
-    choices: ["no", "not", "yes", "ain't"],
-    correct: "0",
+    name: "Demo-",
+    date: "01/01/2021",
+    time: "3:00 PM",
+    venue: "Brooklyn WFM",
+    campaign: "Saso",
+    duration: "3:00"
 },
 {
-    prompt: "The answer is definitely no",
-    choices: ["no", "ain't", "not", "yes"],
-    correct: "0",
+    name: "Demo-",
+    date: "01/01/2021",
+    time: "3:00 PM",
+    venue: "Brooklyn WFM",
+    campaign: "Saso",
+    duration: "3:00"
 },
 {
-    prompt: "The answer is not",
-    choices: ["yes", "no", "not", "ain't"],
-    correct: "2",
+    name: "Demo-",
+    date: "01/01/2021",
+    time: "3:00 PM",
+    venue: "Brooklyn WFM",
+    campaign: "Saso",
+    duration: "3:00"
 },
 {
-    prompt: "The answer is also not",
-    choices: ["no", "yes", "not", "ain't"],
-    correct: "2",
-},
-{
-    prompt: "The answer might be not",
-    choices: ["no", "not", "yes", "ain't"],
-    correct: "1",
-},
-{
-    prompt: "The answer is definitely not",
-    choices: ["no", "ain't", "not", "yes"],
-    correct: "2",
+    name: "Demo-",
+    date: "01/01/2021",
+    time: "3:00 PM",
+    venue: "Brooklyn WFM",
+    campaign: "Saso",
+    duration: "3:00"
 },
 ]
 
-askQuestion();
+console.log('hello');
+console.log('HI');
+createDemo();
 
-function askQuestion() {
+function createDemo() {
     for (var i = 0; i < demoArray.length; i++) {
     // pulls question info from the array, creates span and button elements
         container = document.createElement('div');
         container.setAttribute('class', 'border');
-        title = document.createElement('span');
-        title.setAttribute("class", "mt-4 title");
-        title.textContent = demoArray[i].prompt;
-        brand = document.createElement('span');
-        brand.setAttribute("class", "font-weight-lighter");
-        brand.textContent = demoArray[i].choices[1];
-        store = document.createElement('span');
-        store.setAttribute("class", "font-weight-bold");
-        store.textContent = demoArray[i].correct;
+        row = document.createElement('div');
+        row.setAttribute('class', 'row');
+        eventName = document.createElement('div');
+        eventName.setAttribute("class", "col-3 text-center");
+        // eventName.setAttribute("href", "./index.html");
+        // eventName.innerHTML = demoArray[i].name + (i + 1);
+        eventText = document.createElement('a');
+        eventText.setAttribute("href", "./index.html");
+        eventText.innerHTML = demoArray[i].name + (i + 1);
+        date = document.createElement('div');
+        date.setAttribute('class', 'col-2 text-center');
+        date.textContent = demoArray[i].date;
+        time = document.createElement('div');
+        time.setAttribute('class', 'col-1 text-center');
+        time.textContent = demoArray[i].time;
+        venue = document.createElement('div');
+        venue.setAttribute('class', 'col-3 text-center');
+        venue.textContent = demoArray[i].venue;
+        campaign = document.createElement('div');
+        campaign.setAttribute("class", "col-2 text-center");
+        campaign.textContent = demoArray[i].campaign;
+        duration = document.createElement('span');
+        duration.setAttribute("class", "col-1 text-center");
+        duration.textContent = demoArray[i].duration;
         demoDisplay.appendChild(container);
-        container.appendChild(title);
-        container.appendChild(brand);
-        container.appendChild(store);
+        container.appendChild(row);
+        row.appendChild(eventName);
+        eventName.appendChild(eventText);
+        row.appendChild(date);
+        row.appendChild(time);
+        row.appendChild(venue);
+        row.appendChild(campaign);
+        row.appendChild(duration);
     }
 };
