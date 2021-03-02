@@ -107,7 +107,7 @@ function createDemo() {
         // eventName.setAttribute("href", "./index.html");
         // eventName.innerHTML = demoArray[i].name + (i + 1);
         eventText = document.createElement('a');
-        eventText.setAttribute("href", "./index.html");
+        eventText.setAttribute("href", "../index.html");
         eventText.innerHTML = demoArray[i].name + (i + 1);
         date = document.createElement('div');
         date.setAttribute('class', 'col-2 text-center');
