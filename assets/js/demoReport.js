@@ -3,57 +3,50 @@ var eventDateInput = $('#event-date');
 var eventTimeInput = $('#event-time');
 var eventLocationInput = $('#event-location');
 var eventCampaignInput = $('#campaign');
-var eventDurationInput = $('#event-duration');
-var baNameInput = $('#brand-ambassador')
-var demoDatabase = JSON.parse(localStorage.getItem("demoDatabase")) || [];
+var feedbackInput = $('#feedback')
+var reportData = JSON.parse(localStorage.getItem("reportData")) || [];
 
 projectFormEl.on('submit', handleProjectFormSubmit);
 
 function handleProjectFormSubmit(event) {
   event.preventDefault();
 
-  var charSet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!()?[]`~;:!@#$%^&*+=";
-  var demoId = "";
-  for ( var i = 0; i < 7; i++ ) {
-      demoId += charSet[Math.floor(Math.random() * 7)];
-    }
   var eventDate = eventDateInput;
   var eventTime = eventTimeInput.val().trim();
   var eventLocation = eventLocationInput.val().trim();
   var eventCampaign = eventCampaignInput.val().trim();
-  var eventDuration = eventDurationInput;
-  var baName = baNameInput.val().trim();
+  var eventFeedback = feedbackInput.val().trim();
   
-  console.log(demoId);
-  createDemo(demoId, eventDate, eventTime, eventLocation, eventCampaign, eventDuration, baName);
+  submitData(eventDate, eventTime, eventLocation, eventCampaign, eventFeedback);
 
   projectFormEl[0].reset();
 };
 
-function createDemo(demoId, eventDate, eventTime, eventLocation, eventCampaign, eventDuration, baName) {
+function submitData(eventDate, eventTime, eventLocation, eventCampaign, eventFeedback) {
     
-  var newDemo = {
-      id: demoId,
-      name: `${eventCampaign} Demo @ ${eventLocation}`,
+  var demoData = {
+      name: `${eventCampaign} Demo @ ${eventLocation} on ${eventDate}`,
       date: eventDate,
       time: eventTime,
       venue: eventLocation,
       campaign: eventCampaign,
-      duration: eventDuration,
-      ba: baName,
+      feedback: eventFeedback,
   }
 
-  console.log(newDemo);
-  demoDatabase.push(newDemo);
-  localStorage.setItem("demoDatabase", JSON.stringify(demoDatabase));
+  console.log(demoData);
+  reportData.push(demoData);
+  localStorage.setItem("reportData", JSON.stringify(reportData));
 };
 
 $(function () {
-  $('#datepicker').datepicker({
+  $('#event-date').datepicker({
     changeMonth: true,
     changeYear: true,
   });
 });
+
+// possible to have google maps handle location??
+// make campaign selector to trigger post-event questions
 
 $(function () {
   var locationNames = [
@@ -96,17 +89,5 @@ $(function () {
   ];
   $('#event-location').autocomplete({
     source: locationNames,
-  });
-});
-
-$(function () {
-  var baNames = [
-    'BA-1',
-    'BA-2',
-    'BA-3',
-    'BA-4',
-  ];
-  $('#brand-ambassador').autocomplete({
-    source: baNames,
   });
 });
