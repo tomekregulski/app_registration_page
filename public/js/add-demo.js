@@ -1,17 +1,17 @@
 async function newFormHandler(event) {
   event.preventDefault();
-  const dish_name = document.querySelector("#dish_name").value;
-  const description = document.querySelector("#description").value;
-  const guest_name = document.querySelector("#guest_name").value;
-  const has_nuts = document.querySelector("#has_nuts:checked") ? true : false;
+  const brand = document.querySelector("#dish_name").value;
+  const campaign = document.querySelector("#description").value;
+  const ba_name = document.querySelector("#guest_name").value;
+  // const location = document.querySelector("#has_nuts:checked") ? true : false;
 
-  const response = await fetch(`/api/dish`, {
+  const response = await fetch(`/api/demo`, {
     method: "POST",
     body: JSON.stringify({
-      dish_name,
-      description,
-      guest_name,
-      has_nuts,
+      brand,
+      campaign,
+      ba_name,
+      location,
     }),
     headers: {
       "Content-Type": "application/json",
@@ -21,7 +21,7 @@ async function newFormHandler(event) {
   if (response.ok) {
     document.location.replace("/");
   } else {
-    alert("Failed to add dish");
+    alert("Failed to add demo");
   }
 }
 

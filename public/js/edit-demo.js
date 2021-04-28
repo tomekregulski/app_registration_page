@@ -1,22 +1,22 @@
 async function editFormHandler(event) {
   event.preventDefault();
-  const dish_name = document.querySelector("#dish_name").value;
-  const description = document.querySelector("#description").value;
-  const guest_name = document.querySelector("#guest_name").value;
+  const brand = document.querySelector("#dish_name").value;
+  const campaign = document.querySelector("#description").value;
+  const ba_name = document.querySelector("#guest_name").value;
 
-  const has_nuts = document.querySelector("#has_nuts:checked") ? true : false;
+  // const location = document.querySelector("#has_nuts:checked") ? true : false;
 
   const id = window.location.toString().split("/")[
     window.location.toString().split("/").length - 1
   ];
 
-  const response = await fetch(`/api/dish/${id}`, {
+  const response = await fetch(`/api/demo/${id}`, {
     method: "PUT",
     body: JSON.stringify({
-      dish_name,
-      description,
-      guest_name,
-      has_nuts,
+      brand,
+      campaign,
+      ba_name,
+      location,
     }),
     headers: {
       "Content-Type": "application/json",
@@ -24,9 +24,9 @@ async function editFormHandler(event) {
   });
 
   if (response.ok) {
-    document.location.replace(`/dish/${id}`);
+    document.location.replace(`/demo/${id}`);
   } else {
-    alert("Failed to edit dish");
+    alert("Failed to edit demo");
   }
 }
 

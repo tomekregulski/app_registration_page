@@ -1,6 +1,6 @@
 const sequelize = require("../config/connection");
-const Dish = require("../models/Dish");
-const dishData = require("./dish-seeds.json");
+const Demo = require("../models/Demo");
+const demoData = require("./demo-seeds.json");
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });

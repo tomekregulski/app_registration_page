@@ -1,21 +1,17 @@
 <div class="dish-card">
   <div class="dish-card-header">
-    {{dish_name}}
+    {{brand}}
   </div>
   <div class="card-body">
     <p>
-      Description:
-      {{description}}
+      Campaign:
+      {{campaign}}
     </p>
     <p>
-      Guest:
-      {{guest_name}}
+      BA:
+      {{ba_name}}
     </p>
-    {{#if has_nuts}}
-      <p class="has-nuts">
-        Contains Nuts
-      </p>
-    {{/if}}
+    {{location}}
   </div>
 </div>
 
@@ -23,42 +19,46 @@
 
 <div class="edit-dish-container">
   <h2>
-    Update Dish
+    Update Event
   </h2>
   <form class="edit-dish-form">
-    <label for="dish_name">
-      Dish Name:
+    <label for="brand">
+      Brand:
     </label>
     <br />
-    <textarea id="dish_name" name="dish_name" rows="2" cols="30">
-      {{dish_name}}
+    <textarea id="brand" name="brand" rows="2" cols="30">
+      {{brand}}
     </textarea>
     <br />
-    <label for="description">
-      Description:
+    <label for="campaign">
+      Campaign:
     </label>
     <br />
-    <textarea id="description" name="description" rows="5" cols="30">
-      {{description}}
+    <textarea id="campaign" name="campaign" rows="2" cols="30">
+      {{campaign}}
     </textarea>
     <br />
-    <label for="guest_name">
-      Guest Name:
+    <label for="ba_name">
+      BA Name:
     </label>
     <br />
-    <textarea id="guest_name" name="guest_name" rows="2" cols="30">
-      {{guest_name}}
+    <textarea id="ba_name" name="ba_name" rows="2" cols="30">
+      {{ba_name}}
+    </textarea>
+    <br />
+    <label for="location">
+      Location:
+    </label>
+    <br />
+    <textarea id="location" name="location" rows="2" cols="30">
+      {{location}}
     </textarea>
     <br />
     <br />
-    <input type="checkbox" id="has_nuts" name="has_nuts" value="true" />
-    <label for="has_nuts">
-      Check box if this dish contains nuts
-    </label>
     <br />
     <button type="submit" value="Submit">
       Submit
     </button>
   </form>
 </div>
-<script src="/js/edit-dish.js"></script>
+<script src="/js/edit-demo.js"></script>
