@@ -4,10 +4,12 @@
       Current Schedule
     </h2>
   </div>
-  {{#each demos as |demos|}}
+  {{#each demos as |demo|}}
     <div class="dish col-md-5">
       <p>
         {{demo.id}}.
+        {{demo.brand}}
+        <br />
         {{demo.campaign}}
       </p>
     </div>
@@ -15,6 +17,9 @@
       <p>
         BA:
         {{demo.ba_name}}
+        <br />
+        Location: 
+        {{demo.location}}
       </p>
     </div>
   {{/each}}
