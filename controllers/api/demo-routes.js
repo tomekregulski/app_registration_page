@@ -1,6 +1,15 @@
 const router = require("express").Router();
 const Demo = require("../../models/Demo");
 
+router.get("/", async (req, res) => {
+  try {
+    const demoData = await Demo.findAll();
+    res.status(200).json(demoData);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+
 // route to create/add a demo
 router.post("/", async (req, res) => {
   try {
@@ -18,7 +27,7 @@ router.post("/", async (req, res) => {
 
 router.put("/:id", async (req, res) => {
   try {
-    const demo = await Demo.update(
+    const demoData = await Demo.update(
       {
         campaign: req.body.campaign,
         brand: req.body.brand,
@@ -31,7 +40,7 @@ router.put("/:id", async (req, res) => {
         },
       }
     );
-    res.status(200).json(demo);
+    res.status(200).json(demoData);
   } catch (err) {
     res.status(500).json(err);
   }
