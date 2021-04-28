@@ -10,6 +10,19 @@ router.get("/", async (req, res) => {
   }
 });
 
+router.get("/:id", async (req, res) => {
+  try {
+    const demoData = await Demo.findByPk(req.params.id);
+    if (!demoData) {
+      res.status(404).json({ message: "No demo found with this id!" });
+      return;
+    }
+    res.status(200).json(demoData);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+
 // route to create/add a demo
 router.post("/", async (req, res) => {
   try {
