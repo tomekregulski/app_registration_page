@@ -59,4 +59,24 @@ router.put("/:id", async (req, res) => {
   }
 });
 
+router.delete("/:id", async (req, res) => {
+  try {
+    const demoData = await Demo.destroy({
+      where: {
+        id: req.params.id,
+      },
+    });
+
+    if (!demoData) {
+      res
+        .status(404)
+        .json({ message: `No demo found with id: ${req.params.id}!` });
+    }
+
+    res.status(200).json(demoData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 module.exports = router;
